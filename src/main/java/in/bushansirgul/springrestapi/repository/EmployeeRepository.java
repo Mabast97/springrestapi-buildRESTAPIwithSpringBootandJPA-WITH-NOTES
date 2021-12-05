@@ -42,7 +42,7 @@ public interface EmployeeRepository extends PagingAndSortingRepository<Employee,
     @Transactional
     @Modifying  // for modifying queries, we should first use this annotation like (delete, update, create)
     @Query("delete from Employee where name = :name ")
-    Integer deleteEmployeeByName(String name);
+    Integer deleteEmployeeByName(String name) ;
 
 
 }
